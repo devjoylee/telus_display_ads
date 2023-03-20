@@ -45,48 +45,24 @@ footer p {
   padding: 100px 20px 80px;
 }
 
-.region {
+.section {
   display: grid;
   grid-template-columns: repeat(3, 200px);
   grid-gap: 20px;
   position: relative;
 }
 
-.region + .region {
+.section + .section {
   margin-top: 150px;
 }
 
-.region h2 {
+.section h2 {
   margin-bottom: 10px;
   font-size: 33px;
   top: -70px;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-}
-
-.region h2::before,
-.region h2::after {
-  content: '';
-  background-color: #d1d1d1;
-  width: 350px;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-}
-
-.region h2::before {
-  right: 120%;
-}
-
-.region h2::after {
-  left: 120%;
-}
-
-.part h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 .box {
@@ -124,7 +100,7 @@ dd {
   .container {
     padding-top: 70px;
   }
-  .region {
+  .section {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .box {
@@ -136,7 +112,7 @@ dd {
   .container {
     margin: 0;
   }
-  .region {
+  .section {
     grid-template-columns: 1fr 1fr;
   }
   .box {
@@ -154,7 +130,7 @@ dd {
 }
 
 @media screen and (max-width: 320px) {
-  .region {
+  .section {
     grid-gap: 10px;
     grid-template-columns: 1fr;
   }
