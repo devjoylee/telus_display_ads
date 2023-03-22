@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="ad.size" content="width=300,height=250" />
+    <meta name="ad.size" content="width=300,height=50" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
@@ -10,7 +10,7 @@
     <script>
       var clickTag = '';
     </script>
-    <title>TELUS_300x250_PUNJ</title>
+    <title>TELUS_300x50_PUNJ</title>
   </head>
   <body>
     <div id="ad">
@@ -19,7 +19,6 @@
 
         <div class="frame frame1">
           <img src="assets/img/txt1.png" class="svg txt" />
-          <img src="assets/img/butterfly.png" class="img" />
         </div>
         <div class="frame frame2">
           <img src="assets/img/netflix.png" class="img" />
@@ -27,13 +26,7 @@
         </div>
         <div class="frame frame3">
           <img src="assets/img/txt3.png" class="svg txt" />
-          <img src="assets/img/tv.png" class="img" />
           <img src="assets/img/terms.png" class="svg terms" />
-        </div>
-        <div class="cta">
-          <div class="cta-bg"></div>
-          <img src="assets/img/cta-off.png" class="svg cta-off" />
-          <img src="assets/img/cta-on.png" class="svg cta-on" />
         </div>
       </div>
     </div>
@@ -44,18 +37,15 @@
         repeatDelay: 3,
       });
       timeline
-        .from('.frame1 .txt', { y: -15, opacity: 0 })
-        .from('.frame1 .img', { y: 100, opacity: 0 })
+        .from('.frame1 .txt', { y: -5, opacity: 0 })
         .to('.frame1', { opacity: 0, delay: 2 })
         .from('.frame2', { opacity: 0 }, '<')
         .from('.frame2 .img', { opacity: 0, stagger: 0.2 })
-        .from('.frame2 .txt', { y: -8, opacity: 0 })
+        .from('.frame2 .txt', { y: -3, opacity: 0 })
         .to('.frame2', { opacity: 0, delay: 2 })
         .from('.frame3', { opacity: 0 }, '<')
-        .from('.frame3 .txt', { y: -8, opacity: 0 })
-        .from('.frame3 .img', { y: 10, opacity: 0 })
-        .to('.terms', { opacity: 1, delay: 0.8 })
-        .to('.cta', { display: 'block', opacity: 1 }, '<');
+        .from('.frame3 .txt', { opacity: 0 })
+        .to('.terms', { opacity: 1, delay: 0.8 });
 
       // exit and link to banner
       document.querySelector('#banner').addEventListener('click', exit);

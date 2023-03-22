@@ -35,21 +35,6 @@ body {
   height: 250px;
 }
 
-/* ----- FRAME ----- */
-.frame3 .price {
-  z-index: 10;
-}
-
-/* ----- LOGO ----- */
-.logo {
-  z-index: 10;
-}
-
-.logo-color {
-  opacity: 0;
-  z-index: 20;
-}
-
 /* ----- CTA Button ----- */
 .cta {
   display: none;
