@@ -15,25 +15,32 @@
   <body>
     <div id="ad">
       <div id="banner">
-        <img src="assets/svg/logo.svg" class="logo" />
+        <img src="assets/svg/logo.svg" class="svg logo" />
 
         <div class="frame frame1">
+          <img src="assets/img/frame1.png" class="img" />
           <img src="assets/svg/txt1.svg" class="svg txt" />
-          <img src="assets/img/butterfly.png" class="img" />
+          <div class="wrap">
+            <img src="assets/img/butterfly.png" class="img butterfly" />
+          </div>
         </div>
         <div class="frame frame2">
-          <img src="assets/img/netflix.png" class="img" />
+          <img src="assets/img/frame2.png" class="img" />
           <img src="assets/svg/txt2.svg" class="svg txt" />
+          <img src="assets/img/butterfly.png" class="img butterfly" />
+          <div class="wrap"></div>
         </div>
         <div class="frame frame3">
-          <img src="assets/img/txt3.png" class="svg txt" />
-          <img src="assets/img/tv.png" class="img" />
-          <img src="assets/svg/terms.svg" class="svg terms" />
+          <img src="assets/img/frame3.png" class="img" />
+          <img src="assets/svg/txt3.svg" class="svg txt" />
         </div>
-        <div class="cta">
-          <div class="cta-bg"></div>
-          <img src="assets/svg/cta-off.svg" class="svg cta-off" />
-          <img src="assets/svg/cta-on.svg" class="svg cta-on" />
+        <div class="frame frame4">
+          <img src="assets/img/frame4.png" class="img" />
+          <img src="assets/svg/txt4.svg" class="svg txt" />
+        </div>
+        <div class="frame frame5">
+          <img src="assets/img/frame5.png" class="img" />
+          <img src="assets/svg/txt5.svg" class="svg txt" />
         </div>
       </div>
     </div>
@@ -44,18 +51,17 @@
         repeatDelay: 3,
       });
       timeline
-        .from('.frame1 .txt', { y: -15, opacity: 0 })
-        .from('.frame1 .img', { y: 100, opacity: 0 })
-        .to('.frame1', { opacity: 0, delay: 2 })
+        .to('.frame1', { opacity: 0, delay: 2.3 })
         .from('.frame2', { opacity: 0 }, '<')
-        .from('.frame2 .img', { opacity: 0, stagger: 0.2 })
-        .from('.frame2 .txt', { y: -8, opacity: 0 })
-        .to('.frame2', { opacity: 0, delay: 2 })
-        .from('.frame3', { opacity: 0 }, '<')
-        .from('.frame3 .txt', { opacity: 0 })
-        .from('.frame3 .img', { y: 10, opacity: 0 })
-        .to('.terms', { opacity: 1, delay: 0.8 })
-        .to('.cta', { display: 'block', opacity: 1 }, '<');
+        .from('.frame2 .txt', { opacity: 0 }, '-=0.1')
+        .from('.frame2 .butterfly', { opacity: 0 }, '<')
+        .to('.frame2', { opacity: 0, delay: 2.3 })
+        .from('.frame3', { opacity: 0 })
+        .to('.frame3', { opacity: 0, delay: 2.3 })
+        .from('.frame4', { opacity: 0 }, '<')
+        .from('.frame4 .txt', { opacity: 0 }, '-=0.1')
+        .to('.frame4', { opacity: 0, delay: 2.3 })
+        .from('.frame5', { opacity: 0 });
 
       // exit and link to banner
       document.querySelector('#banner').addEventListener('click', exit);
