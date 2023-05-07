@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=600" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssruleplugin_3.5.1_min.js"></script>
+    <script>
+      var clickTag = '';
+    </script>
+    <title>TELUS_300x600_PUNJ</title>
+  </head>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <img src="assets/svg/logo.svg" class="svg logo" />
+
+        <span class="copy txt txt1"></span>
+        <span class="copy txt txt2"></span>
+        <span class="copy txt txt3"></span>
+        <span class="copy txt txt4"></span>
+
+        <span class="copy device1"></span>
+        <span class="copy device2"></span>
+        <span class="copy device3"></span>
+
+        <span class="copy terms"></span>
+
+        <div class="cta">
+          <div class="cta-bg"></div>
+          <span class="copy cta-off"></span>
+          <span class="copy cta-on"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const timeline = gsap.timeline({
+        defaults: { duration: 0.7, delay: 0.3, ease: 'none' },
+      });
+      timeline
+        .from('.txt1', { opacity: 0 })
+        .from('.device1', { opacity: 0, delay: 0 }, '<')
+        .from('.txt2', { opacity: 0 })
+        .from('.device2', { opacity: 0, delay: 0 }, '<')
+        .from('.txt3', { opacity: 0 })
+        .from('.device3', { opacity: 0, delay: 0 }, '<')
+        .from('.txt4', { opacity: 0 })
+        .from('.terms', { opacity: 0 })
+        .from('.cta', { opacity: 0, delay: 0 }, '<');
+
+      // exit and link to banner
+      document.querySelector('#banner').addEventListener('click', exit);
+      function exit() {
+        window.open(clickTag);
+      }
+    </script>
+  </body>
+</html>
