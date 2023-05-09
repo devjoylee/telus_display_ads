@@ -73,8 +73,7 @@ footer p {
 }
 
 .box:hover {
-  margin: -3px;
-  padding: 23px 38px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
 }
 
 dt {
@@ -115,9 +114,6 @@ dd {
   }
   .box {
     padding: 20px 15px;
-  }
-  .box:hover {
-    padding: 25px 20px;
   }
   dt {
     font-size: 18px;

@@ -1,14 +1,14 @@
-<svg id="logo-c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+<svg id="LOGO-C" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        fill: #6ebe44;
       }
       .cls-2 {
-        fill: #fff;
+        fill: #6fbe44;
       }
       .cls-3 {
-        fill: #fff;
+        fill: #4b286d;
       }
     </style>
   </defs>

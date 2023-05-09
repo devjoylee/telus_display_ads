@@ -15,7 +15,7 @@ body {
   width: 300px;
   height: 250px;
   border: 1px solid #000;
-  background: url(assets/background.png) center / cover;
+  background: #f4f5f7;
   position: relative;
 }
 
@@ -29,78 +29,23 @@ body {
   position: absolute;
 }
 
-.logo {
-  width: 325px;
-  height: 260px;
-  top: 10px;
-  right: 0;
-}
-
-.copy {
-  background-image: url(assets/sprites.png);
-  background-position: 0 0;
-  background-size: 190px;
-  background-repeat: no-repeat;
+.svg,
+.frame .img {
   width: 300px;
   height: 250px;
 }
 
-.txt {
-  left: 24px;
+.logo {
+  width: 325px;
+  height: 270px;
+  right: 0;
+  top: 0;
 }
 
-.txt1 {
-  background-position: 0 0;
-  height: 16px;
-  top: 55px;
-}
-
-.txt2 {
-  background-position: 0 -18px;
-  width: 42px;
-  height: 18px;
-  top: 72px;
-}
-
-.txt3 {
-  background-position: -43px -18px;
-  left: 68px;
-  height: 18px;
-  top: 72px;
-}
-
-.txt4 {
-  background-position: 0 -35px;
-  height: 55px;
-  top: 98px;
-}
-
-.device1 {
-  background-position: 0 -140px;
-  width: 40px;
-  top: 62px;
-  right: 28px;
-}
-
-.device2 {
-  background-position: -50px -140px;
-  width: 80px;
-  top: 142px;
-  right: 74px;
-}
-
-.device3 {
-  background-position: -130px -140px;
-  width: 50px;
-  top: 148px;
-  right: 20px;
-}
-
-.terms {
-  background-position: 0 -90px;
-  height: 30px;
-  left: 15px;
-  bottom: 7px;
+.chicks {
+  width: 300px;
+  right: -200px;
+  bottom: 3px;
 }
 
 /* ----- CTA Button ----- */
@@ -109,27 +54,14 @@ body {
 }
 
 .cta-bg {
-  width: 60px;
-  height: 16px;
-  top: 165px;
+  width: 76px;
+  height: 22px;
+  top: 145px;
   left: 22px;
   border-radius: 15px;
-  background: #f1f1f1;
+  background: #008800;
+  border: 1px solid #008800;
   transition: background 0.35s ease-in-out;
-}
-
-.cta .copy {
-  height: 8px;
-  left: 38px;
-  bottom: 71px;
-}
-
-.cta .cta-off {
-  background-position: 0 -120px;
-}
-
-.cta .cta-on {
-  background-position: 0 -127.5px;
 }
 
 .cta-on,
@@ -142,7 +74,7 @@ body {
 }
 
 #banner:hover .cta-bg {
-  background: #3b1f58;
+  background: #fff;
 }
 
 img {

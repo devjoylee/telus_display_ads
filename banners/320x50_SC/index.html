@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="ad.size" content="width=300,height=600" />
+    <meta name="ad.size" content="width=320,height=50" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
@@ -10,13 +10,12 @@
     <script>
       var clickTag = '';
     </script>
-    <title>TELUS_300x600_SC</title>
+    <title>TELUS_320x50_SC</title>
   </head>
   <body>
     <div id="ad">
       <div id="banner">
         <img src="assets/svg/logo.svg" class="svg logo" alt="logo" />
-        <img src="assets/chicks.png" class="chicks" />
 
         <div class="frame frame1">
           <img src="assets/svg/txt1.svg" class="svg txt" />
@@ -24,12 +23,6 @@
 
         <div class="frame frame2">
           <img src="assets/svg/txt2.svg" class="svg txt" />
-        </div>
-
-        <div class="cta">
-          <div class="cta-bg"></div>
-          <img src="assets/svg/cta-off.svg" class="svg cta-off" />
-          <img src="assets/svg/cta-on.svg" class="svg cta-on" />
         </div>
       </div>
     </div>
@@ -39,7 +32,7 @@
         defaults: { duration: 0.7, delay: 0.3, ease: 'none' },
       });
       timeline
-        .to('.chicks', { right: -80, duration: 1.5 })
+        .to('.chicks', { bottom: -4, duration: 1.5 })
         .to('.frame1 .txt', { opacity: 0 }, '-=0.8')
         .from('.frame2 .txt', { opacity: 0 }, '-=0.2')
         .from('.cta', { opacity: 0 });

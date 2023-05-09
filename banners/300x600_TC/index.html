@@ -15,23 +15,21 @@
   <body>
     <div id="ad">
       <div id="banner">
-        <img src="assets/svg/logo.svg" class="svg logo" />
+        <img src="assets/svg/logo.svg" class="svg logo" alt="logo" />
+        <img src="assets/chicks.png" class="chicks" />
 
-        <span class="copy txt txt1"></span>
-        <span class="copy txt txt2"></span>
-        <span class="copy txt txt3"></span>
-        <span class="copy txt txt4"></span>
+        <div class="frame frame1">
+          <img src="assets/svg/txt1.svg" class="svg txt" />
+        </div>
 
-        <span class="copy device1"></span>
-        <span class="copy device2"></span>
-        <span class="copy device3"></span>
-
-        <span class="copy terms"></span>
+        <div class="frame frame2">
+          <img src="assets/svg/txt2.svg" class="svg txt" />
+        </div>
 
         <div class="cta">
           <div class="cta-bg"></div>
-          <span class="copy cta-off"></span>
-          <span class="copy cta-on"></span>
+          <img src="assets/svg/cta-off.svg" class="svg cta-off" />
+          <img src="assets/svg/cta-on.svg" class="svg cta-on" />
         </div>
       </div>
     </div>
@@ -41,15 +39,10 @@
         defaults: { duration: 0.7, delay: 0.3, ease: 'none' },
       });
       timeline
-        .from('.txt1', { opacity: 0 })
-        .from('.device1', { opacity: 0, delay: 0 }, '<')
-        .from('.txt2', { opacity: 0 })
-        .from('.device2', { opacity: 0, delay: 0 }, '<')
-        .from('.txt3', { opacity: 0 })
-        .from('.device3', { opacity: 0, delay: 0 }, '<')
-        .from('.txt4', { opacity: 0 })
-        .from('.terms', { opacity: 0 })
-        .from('.cta', { opacity: 0, delay: 0 }, '<');
+        .to('.chicks', { right: -80, duration: 1.5 })
+        .to('.frame1 .txt', { opacity: 0 }, '-=0.8')
+        .from('.frame2 .txt', { opacity: 0 }, '-=0.2')
+        .from('.cta', { opacity: 0 });
 
       // exit and link to banner
       document.querySelector('#banner').addEventListener('click', exit);

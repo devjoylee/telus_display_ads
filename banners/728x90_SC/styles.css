@@ -12,8 +12,8 @@ body {
   display: block;
   overflow: hidden;
   cursor: pointer;
-  width: 300px;
-  height: 600px;
+  width: 728px;
+  height: 90px;
   border: 1px solid #000;
   background: #f4f5f7;
   position: relative;
@@ -31,8 +31,8 @@ body {
 
 .svg,
 .frame .img {
-  width: 300px;
-  height: 600px;
+  width: 728px;
+  height: 90px;
 }
 
 .logo {
@@ -43,9 +43,9 @@ body {
 }
 
 .chicks {
-  width: 410px;
-  right: -150px;
-  bottom: 65px;
+  width: 170px;
+  right: 150px;
+  bottom: -60px;
 }
 
 /* ----- CTA Button ----- */
@@ -54,11 +54,10 @@ body {
 }
 
 .cta-bg {
-  width: 90px;
-  height: 26px;
-  top: 213px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 74px;
+  height: 20px;
+  bottom: 7px;
+  right: 15px;
   border-radius: 15px;
   background: #008800;
   border: 1px solid #008800;

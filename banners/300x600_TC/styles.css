@@ -15,7 +15,7 @@ body {
   width: 300px;
   height: 600px;
   border: 1px solid #000;
-  background: url(assets/background.png) center / cover;
+  background: #f4f5f7;
   position: relative;
 }
 
@@ -29,78 +29,23 @@ body {
   position: absolute;
 }
 
-.logo {
-  width: 340px;
-  height: 280px;
-  top: 15px;
-  right: 8px;
-}
-
-.copy {
-  background-image: url(assets/sprites.png);
-  background-position: 0 0;
-  background-size: 290px;
-  background-repeat: no-repeat;
+.svg,
+.frame .img {
   width: 300px;
   height: 600px;
 }
 
-.txt {
-  left: 20px;
+.logo {
+  width: 325px;
+  height: 270px;
+  right: 0;
+  top: 0;
 }
 
-.txt1 {
-  background-position: 0 0;
-  height: 25px;
-  top: 85px;
-}
-
-.txt2 {
-  background-position: 0 -30px;
-  width: 76px;
-  height: 25px;
-  top: 117px;
-}
-
-.txt3 {
-  background-position: -70px -30px;
-  height: 32px;
-  left: 90px;
-  top: 117px;
-}
-
-.txt4 {
-  background-position: 0 -65px;
-  height: 152px;
-  top: 150px;
-}
-
-.device1 {
-  background-position: 0 -300px;
-  width: 55px;
-  top: 296px;
-  right: 50px;
-}
-
-.device2 {
-  background-position: -63px -300px;
-  width: 140px;
-  top: 420px;
-  left: 30px;
-}
-
-.device3 {
-  background-position: -213px -300px;
-  width: 60px;
-  top: 440px;
-  right: 33px;
-}
-
-.terms {
-  background-position: 0 -263px;
-  height: 30px;
-  left: 15px;
-  bottom: 18px;
+.chicks {
+  width: 410px;
+  right: -150px;
+  bottom: 65px;
 }
 
 /* ----- CTA Button ----- */
@@ -109,27 +54,15 @@ body {
 }
 
 .cta-bg {
-  width: 100px;
-  height: 27px;
-  top: 280px;
-  left: 22px;
+  width: 90px;
+  height: 26px;
+  top: 213px;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 15px;
-  background: #f1f1f1;
+  background: #008800;
+  border: 1px solid #008800;
   transition: background 0.35s ease-in-out;
-}
-
-.cta .copy {
-  height: 14px;
-  top: 286px;
-  left: 42px;
-}
-
-.cta .cta-off {
-  background-position: 0 -225px;
-}
-
-.cta .cta-on {
-  background-position: 0 -241.5px;
 }
 
 .cta-on,
@@ -142,7 +75,7 @@ body {
 }
 
 #banner:hover .cta-bg {
-  background: #3b1f58;
+  background: #fff;
 }
 
 img {
