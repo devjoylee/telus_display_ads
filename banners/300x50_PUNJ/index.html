@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=50" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssruleplugin_3.5.1_min.js"></script>
+    <script>
+      var clickTag = '';
+    </script>
+    <title>TELUS_300x50_PUNJ</title>
+  </head>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <img src="assets/svg/logo.svg" class="svg logo" />
+        <img src="assets/svg/txt1.png" class="img txt1" />
+        <img src="assets/svg/txt2.png" class="img txt2" />
+        <img src="assets/svg/terms.png" class="img terms" />
+      </div>
+    </div>
+
+    <script>
+      const timeline = gsap.timeline({
+        defaults: { duration: 0.7, delay: 0.2, ease: 'none' },
+      });
+      timeline
+        .from('.txt1', { opacity: 0 })
+        .from('.txt2', { opacity: 0 })
+        .from('.terms', { opacity: 0 });
+
+      // exit and link to banner
+      document.querySelector('#banner').addEventListener('click', exit);
+      function exit() {
+        window.open(clickTag);
+      }
+    </script>
+  </body>
+</html>
