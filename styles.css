@@ -47,7 +47,7 @@ footer p {
 
 .section {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(2, 200px);
   grid-gap: 20px;
   position: relative;
 }
@@ -98,7 +98,7 @@ dd {
     padding-top: 70px;
   }
   .section {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .box {
     padding: 20px;
@@ -108,9 +108,6 @@ dd {
 @media screen and (max-width: 540px) {
   .container {
     margin: 0;
-  }
-  .section {
-    grid-template-columns: 1fr 1fr;
   }
   .box {
     padding: 20px 15px;

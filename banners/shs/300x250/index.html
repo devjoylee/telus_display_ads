@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssruleplugin_3.5.1_min.js"></script>
+    <script>
+      var clickTag = '';
+    </script>
+    <title>TELUS_SHS_300x250</title>
+  </head>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <div class="frame frame1">
+          <img src="assets/svg/logo.svg" class="svg logo" />
+          <img src="assets/img/icons.gif" class="icons" />
+          <img src="assets/svg/txt1.svg" class="svg txt" />
+        </div>
+
+        <div class="frame frame2">
+          <img src="assets/img/prom.png" class="img tv" />
+          <img src="assets/svg/terms.svg" class="svg terms" />
+        </div>
+
+        <div class="cta">
+          <div class="cta-bg"></div>
+          <img src="assets/svg/cta-off.svg" class="svg cta-off" />
+          <img src="assets/svg/cta-on.svg" class="svg cta-on" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const timeline = gsap.timeline({
+        defaults: { duration: 0.6, ease: 'none' },
+      });
+      timeline
+        .to('.frame1', { opacity: 0, delay: 4 })
+        .from('.frame2', { opacity: 0 }, '-=0.2')
+        .from('.terms', { opacity: 0, delay: 0.6 })
+        .from('.cta', { opacity: 0 }, '<')
+        .from('.bubble', { opacity: 0, delay: 0.2 });
+
+      // exit and link to banner
+      document.querySelector('#banner').addEventListener('click', exit);
+      function exit() {
+        window.open(clickTag);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=50" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssruleplugin_3.5.1_min.js"></script>
+    <script>
+      var clickTag = '';
+    </script>
+    <title>TELUS_HS_300x50</title>
+  </head>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <img src="assets/svg/logo.svg" class="svg logo" />
+
+        <div class="frame frame1">
+          <img src="assets/svg/txt1.svg" class="svg txt" />
+        </div>
+
+        <div class="frame frame2">
+          <img src="assets/svg/txt2.svg" class="svg txt" />
+        </div>
+
+        <div class="frame frame3">
+          <img src="assets/svg/txt3.svg" class="svg txt" />
+          <img src="assets/svg/terms.svg" class="svg terms" />
+          <img src="assets/flag.png" class="img" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const timeline = gsap.timeline({
+        defaults: { opacity: 0, duration: 0.5, ease: 'none' },
+      });
+      timeline
+        .to('.frame1', { delay: 2.5 })
+        .from('.frame2', {}, '-=0.1')
+        .to('.frame2', { delay: 2.5 })
+        .to('.logo', {}, '<')
+        .from('.frame3', {}, '-=0.1')
+        .from('.terms', {});
+
+      // exit and link to banner
+      document.querySelector('#banner').addEventListener('click', exit);
+      function exit() {
+        window.open(clickTag);
+      }
+    </script>
+  </body>
+</html>

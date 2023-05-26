@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  caret-color: transparent;
+}
+
+#ad {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  width: 300px;
+  height: 250px;
+  border: 1px solid #000;
+  background: #f4f4f6;
+  position: relative;
+}
+
+#banner,
+.frame {
+  width: 100%;
+  height: 100%;
+}
+
+#banner * {
+  position: absolute;
+}
+
+.svg,
+.frame .img {
+  width: 300px;
+  height: 250px;
+}
+
+.logo {
+  width: 325px;
+  height: 270px;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.icons {
+  width: 160px;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%);
+}
+
+/* ----- CTA Button ----- */
+.cta {
+  position: inherit !important;
+}
+
+.cta-bg {
+  width: 100px;
+  height: 24px;
+  bottom: 31px;
+  left: 29px;
+  border-radius: 15px;
+  background: #008800;
+  border: 1px solid #008800;
+  transition: background 0.35s ease-in-out;
+}
+
+.cta-on,
+#banner:hover .cta-off {
+  opacity: 0;
+}
+
+#banner:hover .cta-on {
+  opacity: 1;
+}
+
+#banner:hover .cta-bg {
+  background: #fff;
+}
+
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
