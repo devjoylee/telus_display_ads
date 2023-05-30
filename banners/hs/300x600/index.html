@@ -41,6 +41,8 @@
     <script>
       const timeline = gsap.timeline({
         defaults: { duration: 0.5, ease: 'none' },
+        repeat: 1,
+        repeatDelay: 3
       });
       timeline
         .to('.frame1', { opacity: 0, delay: 2.5 })
