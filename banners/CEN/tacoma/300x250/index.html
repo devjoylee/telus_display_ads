@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssruleplugin_3.5.1_min.js"></script>
+    <script>
+      var clickTag = '';
+    </script>
+    <title>CEN_Tacoma_300x250</title>
+  </head>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <div id="background" class="ad-element">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop
+                  id="gradientStart"
+                  offset="50%"
+                  style="stop-color: #ca9284; stop-opacity: 1"
+                />
+                <stop id="gradientEnd" offset="100%" style="stop-color: #f5ceb6; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="196" fill="url(#gradient)" />
+            <polygon id="sweep" points="0,196 300,138 300,250 0,250" fill="#6c827b" />
+          </svg>
+        </div>
+
+        <img src="assets/logo.svg" class="ad-element logo" alt="" />
+        <img src="assets/vehicle.png" class="ad-element vehicle" alt="" />
+
+        <div class="frame frame1">
+          <img src="assets/copy1.png" class="ad-element copy1" alt="" />
+        </div>
+        <div class="frame frame2">
+          <img src="assets/copy2.png" class="ad-element copy2" alt="" />
+        </div>
+        <div class="frame frame3">
+          <img src="assets/copy3.png" class="ad-element copy3" alt="" />
+          <img src="assets/legal.png" id="legal-btn" alt="" />
+        </div>
+      </div>
+
+      <div id="legal-overlay" class="ad-element">
+        <p class="legal-text ad-element">
+          * تُطبّق الشروط.
+          <a href="https://www.shoptoyota.ca/ontario/ar/legal" target="_blank">انقر</a> للإطلاع على
+          التفاصيل. قد يفرض الوكيل المحلي رسومًا إضافية تصل إلى 1,221 دولارًا. قد تختلف الرسوم حسب
+          الوكيل.
+        </p>
+        <div id="close" class="ad-element"><span></span> <span></span></div>
+      </div>
+    </div>
+
+    <script>
+      const legalOpen = document.getElementById('legal-btn');
+      const legalClose = document.getElementById('close');
+      const timeline = gsap.timeline({
+        defaults: { duration: 0.5, ease: 'none' },
+      });
+
+      timeline
+        .to('.frame1', { alpha: 0 }, '+=2')
+        .from('.frame2', { alpha: 0 })
+        .to('.frame2', { alpha: 0 }, '+=2')
+        .from('#background', { duration: 1, y: '-=22', ease: 'power1.inOut' }, '<')
+        .to(
+          '.vehicle',
+          { duration: 1, scale: 0.75, x: '-=37', y: '-=33', ease: 'power1.inOut' },
+          '<'
+        )
+        .from(['.frame3', '#legal-btn'], { alpha: 0 });
+
+      // legal modal event
+      legalOpen.addEventListener('click', (e) => {
+        e.stopPropagation();
+        gsap.to('#legal-overlay', { duration: 0.25, autoAlpha: 1, zIndex: 100 });
+      });
+
+      legalClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        gsap.to('#legal-overlay', { duration: 0.25, autoAlpha: 0 });
+      });
+
+      // exit and link to banner
+      document.querySelector('#banner').addEventListener('click', exit);
+      function exit() {
+        window.open(clickTag);
+      }
+    </script>
+  </body>
+</html>

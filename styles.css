@@ -40,14 +40,14 @@ footer p {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 100px 20px 80px;
 }
 
 .section {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(3, 200px);
   grid-gap: 20px;
   position: relative;
 }
@@ -66,7 +66,7 @@ footer p {
 .box {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
   border-radius: 8px;
-  padding: 20px 35px;
+  padding: 20px 28px;
   background: #fefefe;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -84,6 +84,10 @@ dt {
 
 dd + dt {
   margin-top: 20px;
+}
+
+dd + dd {
+  margin-top: 5px;
 }
 
 dd {
