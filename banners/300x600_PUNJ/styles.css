@@ -41,6 +41,13 @@ body {
   right: 6px;
   top: 16px;
 }
+.legal {
+  width: auto;
+  height: 9px;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
 
 /* ----- CTA Button ----- */
 .cta {

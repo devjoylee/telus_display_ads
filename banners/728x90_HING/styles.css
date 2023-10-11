@@ -43,7 +43,14 @@ body {
 }
 
 .frame3 .copy {
-  margin: 7px 0 0 10px;
+  margin-left: 10px;
+}
+
+.legal {
+  width: auto;
+  height: 9px;
+  left: 340px;
+  bottom: 7px;
 }
 
 /* ----- CTA Button ----- */

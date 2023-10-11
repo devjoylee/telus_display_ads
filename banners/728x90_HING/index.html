@@ -41,6 +41,7 @@
         <div class="frame frame3">
           <img src="assets/svg/copy2.svg" class="svg copy" />
           <img src="assets/device2.png" class="device2 img" />
+          <img src="assets/svg/legal.svg" class="svg legal" />
         </div>
 
         <div class="cta">
@@ -60,7 +61,7 @@
           .to('#maskRect', { scaleX: 1, duration: 0.25 }, '+=2.5')
           .to(['.frame1', '.frame2', '.device1'], { alpha: 0 }, '+=1.8')
           .from('.frame3', { alpha: 0 }, '<')
-          .from('.frame3 .copy', { alpha: 0 }, '+=0.2')
+          .from(['.frame3 .copy', '.legal'], { alpha: 0 }, '+=0.2')
           .to('.logo', { duration: 0.3, y: '-=12' }, '<')
           .from('.cta', { alpha: 0 }, '+=0.5');
 

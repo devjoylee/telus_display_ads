@@ -41,7 +41,12 @@ body {
   right: 3px;
   top: -8px;
 }
-
+.legal {
+  width: auto;
+  height: 8px;
+  right: 15px;
+  bottom: 8px;
+}
 /* ----- CTA Button ----- */
 .cta {
   width: 80px;
