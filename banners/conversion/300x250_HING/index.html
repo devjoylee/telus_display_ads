@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssruleplugin_3.5.1_min.js"></script>
+    <script>
+      var clickTag = '';
+    </script>
+    <title>TELUS_300x250_HING</title>
+  </head>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <img src="assets/svg/logo_telus.svg" class="svg logo" alt="logo" />
+        <img src="assets/svg/logo_samsung.svg" class="svg" alt="logo" />
+
+        <img src="assets/device.png" class="device img" />
+
+        <div class="frame frame1">
+          <img src="assets/svg/copy1.svg" class="svg copy" />
+        </div>
+
+        <div class="frame frame2">
+          <svg width="100%" height="100%">
+            <defs>
+              <mask id="mask">
+                <rect id="maskRect" width="100%" height="100%" fill="#ffffff" />
+              </mask>
+            </defs>
+            <g mask="url(#mask)">
+              <rect width="100%" height="100%" fill="#000000" />
+              <image href="assets/mask.png" width="100%" height="100%" />
+            </g>
+          </svg>
+        </div>
+
+        <img src="assets/svg/legal.svg" class="svg legal" />
+        <img src="assets/svg/legal_mask.svg" class="svg legal legal_mask" />
+
+        <div class="cta">
+          <img src="assets/cta-off.png" class="svg cta-off" />
+          <img src="assets/cta-on.png" class="svg cta-on" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const timeline = gsap.timeline({
+        defaults: { duration: 0.6, ease: 'none' },
+      });
+
+      gsap.set('#maskRect', { scaleX: 0, transformOrigin: 'right center' }),
+        timeline
+          .to('#maskRect', { scaleX: 1, duration: 0.25 }, '+=2.5')
+          .from('.legal_mask', { alpha: 0, duration: 0.05 }, '<')
+          .from('.cta', { alpha: 0 }, '+=1');
+
+      // exit and link to banner
+      document.querySelector('#banner').addEventListener('click', exit);
+      function exit() {
+        window.open(clickTag);
+      }
+    </script>
+  </body>
+</html>
