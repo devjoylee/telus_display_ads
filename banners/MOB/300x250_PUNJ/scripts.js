@@ -76,7 +76,7 @@
   (lib.txt1 = function () {
     this.initialize(img.txt1);
   }).prototype = p = new cjs.Bitmap();
-  p.nominalBounds = new cjs.Rectangle(0, 0, 600, 500);
+  p.nominalBounds = new cjs.Rectangle(0, 0, 900, 750);
 
   (lib.txt2_off = function () {
     this.initialize(img.txt2_off);
@@ -211,6 +211,30 @@
 
     this._renderFirstFrame();
   }).prototype = getMCSymbolPrototype(lib.txt2_off_1, new cjs.Rectangle(0, 0, 300, 250), null);
+
+  (lib.txt1_1 = function (mode, startPosition, loop, reversed) {
+    if (loop == null) {
+      loop = true;
+    }
+    if (reversed == null) {
+      reversed = false;
+    }
+    var props = new Object();
+    props.mode = mode;
+    props.startPosition = startPosition;
+    props.labels = {};
+    props.loop = loop;
+    props.reversed = reversed;
+    cjs.MovieClip.apply(this, [props]);
+
+    // Layer_1
+    this.instance = new lib.txt1();
+    this.instance.setTransform(0, 0, 0.33, 0.33);
+
+    this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+    this._renderFirstFrame();
+  }).prototype = getMCSymbolPrototype(lib.txt1_1, new cjs.Rectangle(0, 0, 300, 250), null);
 
   (lib.txt1_border = function (mode, startPosition, loop, reversed) {
     if (loop == null) {
@@ -443,30 +467,6 @@
     this._renderFirstFrame();
   }).prototype = p = new cjs.MovieClip();
   p.nominalBounds = new cjs.Rectangle(55, 37, 189, 159);
-
-  (lib.txt1_1 = function (mode, startPosition, loop, reversed) {
-    if (loop == null) {
-      loop = true;
-    }
-    if (reversed == null) {
-      reversed = false;
-    }
-    var props = new Object();
-    props.mode = mode;
-    props.startPosition = startPosition;
-    props.labels = {};
-    props.loop = loop;
-    props.reversed = reversed;
-    cjs.MovieClip.apply(this, [props]);
-
-    // Layer_1
-    this.instance = new lib.txt1();
-    this.instance.setTransform(0, 0, 0.5, 0.5);
-
-    this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-    this._renderFirstFrame();
-  }).prototype = getMCSymbolPrototype(lib.txt1_1, new cjs.Rectangle(0, 0, 300, 250), null);
 
   (lib.product_1 = function (mode, startPosition, loop, reversed) {
     if (loop == null) {
@@ -724,8 +724,8 @@
     this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(75));
 
     // txt1_txt
-    this.instance_4 = new lib.txt1();
-    this.instance_4.setTransform(400, 130, 1, 1, 0, 0, 0, 150, 125);
+    this.instance_4 = new lib.txt1_1();
+    this.instance_4.setTransform(404, 130, 1, 1, 0, 0, 0, 150, 125);
     this.instance_4.alpha = 0;
     this.instance_4._off = true;
 
