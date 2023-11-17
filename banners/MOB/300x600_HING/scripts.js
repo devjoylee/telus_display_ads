@@ -1016,7 +1016,7 @@
       { src: 'assets/blackfriday.png?1699562801452', id: 'blackfriday' },
       { src: 'assets/cta.png?1699562801452', id: 'cta' },
       { src: 'assets/floor.png?1699562801452', id: 'floor' },
-      { src: 'assets/legal.png?1699562801452', id: 'legal' },
+      // { src: 'assets/legal.png?1699562801452', id: 'legal' },
       { src: 'assets/logo1.png?1699562801452', id: 'logo1' },
       { src: 'assets/logo2.png?1699562801452', id: 'logo2' },
       { src: 'assets/product.png?1699562801452', id: 'product' },
