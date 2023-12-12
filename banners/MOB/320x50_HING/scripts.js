@@ -33,11 +33,6 @@
   }).prototype = p = new cjs.Bitmap();
   p.nominalBounds = new cjs.Rectangle(0, 0, 640, 100);
 
-  (lib.cta = function () {
-    this.initialize(img.cta);
-  }).prototype = p = new cjs.Bitmap();
-  p.nominalBounds = new cjs.Rectangle(0, 0, 640, 100);
-
   (lib.floor = function () {
     this.initialize(img.floor);
   }).prototype = p = new cjs.Bitmap();
@@ -288,30 +283,6 @@
     this._renderFirstFrame();
   }).prototype = getMCSymbolPrototype(lib.floor_1, new cjs.Rectangle(0, 0, 320, 50), null);
 
-  (lib.cta_1 = function (mode, startPosition, loop, reversed) {
-    if (loop == null) {
-      loop = true;
-    }
-    if (reversed == null) {
-      reversed = false;
-    }
-    var props = new Object();
-    props.mode = mode;
-    props.startPosition = startPosition;
-    props.labels = {};
-    props.loop = loop;
-    props.reversed = reversed;
-    cjs.MovieClip.apply(this, [props]);
-
-    // Layer_1
-    this.instance = new lib.cta();
-    this.instance.setTransform(0, 0, 0.5, 0.5);
-
-    this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-    this._renderFirstFrame();
-  }).prototype = getMCSymbolPrototype(lib.cta_1, new cjs.Rectangle(0, 0, 320, 50), null);
-
   (lib.blackfriday_1 = function (mode, startPosition, loop, reversed) {
     if (loop == null) {
       loop = true;
@@ -448,19 +419,6 @@
         .wait(131)
     );
 
-    // cta
-    this.instance_2 = new lib.cta_1();
-    this.instance_2.setTransform(300, 125, 1, 1, 0, 0, 0, 150, 125);
-    this.instance_2._off = true;
-
-    this.timeline.addTween(
-      cjs.Tween.get(this.instance_2)
-        .wait(89)
-        .to({ _off: false }, 0)
-        .to({ x: 150 }, 10, cjs.Ease.get(1))
-        .wait(111)
-    );
-
     // txt3_on
     this.instance_3 = new lib.txt2_on_1();
     this.instance_3.setTransform(150, 125, 1, 1, 0, 0, 0, 150, 125);
@@ -554,7 +512,6 @@
     manifest: [
       { src: 'assets/bg.jpg?1699563660376', id: 'bg' },
       { src: 'assets/blackfriday.png?1699563660376', id: 'blackfriday' },
-      { src: 'assets/cta.png?1699563660376', id: 'cta' },
       { src: 'assets/floor.png?1699563660376', id: 'floor' },
       // { src: 'assets/legal.png?1699563660376', id: 'legal' },
       { src: 'assets/logo1.png?1699563660376', id: 'logo1' },
