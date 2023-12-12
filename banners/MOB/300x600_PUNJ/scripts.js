@@ -48,11 +48,6 @@
   }).prototype = p = new cjs.Bitmap();
   p.nominalBounds = new cjs.Rectangle(0, 0, 300, 600);
 
-  (lib.legal = function () {
-    this.initialize(img.legal);
-  }).prototype = p = new cjs.Bitmap();
-  p.nominalBounds = new cjs.Rectangle(0, 0, 600, 1200);
-
   (lib.logo1 = function () {
     this.initialize(img.logo1);
   }).prototype = p = new cjs.Bitmap();
@@ -77,6 +72,11 @@
     this.initialize(img.txt1);
   }).prototype = p = new cjs.Bitmap();
   p.nominalBounds = new cjs.Rectangle(0, 0, 900, 750);
+
+  (lib.txt1_on = function () {
+    this.initialize(img.txt1_on);
+  }).prototype = p = new cjs.Bitmap();
+  p.nominalBounds = new cjs.Rectangle(0, 0, 600, 500);
 
   (lib.txt2_off = function () {
     this.initialize(img.txt2_off);
@@ -211,6 +211,30 @@
 
     this._renderFirstFrame();
   }).prototype = getMCSymbolPrototype(lib.txt2_off_1, new cjs.Rectangle(0, 0, 300, 250), null);
+
+  (lib.txt1_on_1 = function (mode, startPosition, loop, reversed) {
+    if (loop == null) {
+      loop = true;
+    }
+    if (reversed == null) {
+      reversed = false;
+    }
+    var props = new Object();
+    props.mode = mode;
+    props.startPosition = startPosition;
+    props.labels = {};
+    props.loop = loop;
+    props.reversed = reversed;
+    cjs.MovieClip.apply(this, [props]);
+
+    // Layer_1
+    this.instance = new lib.txt1_on();
+    this.instance.setTransform(0, 0, 0.5, 0.5);
+
+    this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+    this._renderFirstFrame();
+  }).prototype = getMCSymbolPrototype(lib.txt1_on_1, new cjs.Rectangle(0, 0, 300, 250), null);
 
   (lib.txt1_1 = function (mode, startPosition, loop, reversed) {
     if (loop == null) {
@@ -538,30 +562,6 @@
     this._renderFirstFrame();
   }).prototype = getMCSymbolPrototype(lib.logo1_1, new cjs.Rectangle(0, 0, 300, 250), null);
 
-  (lib.legal_1 = function (mode, startPosition, loop, reversed) {
-    if (loop == null) {
-      loop = true;
-    }
-    if (reversed == null) {
-      reversed = false;
-    }
-    var props = new Object();
-    props.mode = mode;
-    props.startPosition = startPosition;
-    props.labels = {};
-    props.loop = loop;
-    props.reversed = reversed;
-    cjs.MovieClip.apply(this, [props]);
-
-    // Layer_1
-    this.instance = new lib.legal();
-    this.instance.setTransform(0, 0, 0.5, 0.5);
-
-    this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-    this._renderFirstFrame();
-  }).prototype = getMCSymbolPrototype(lib.legal_1, new cjs.Rectangle(0, 0, 300, 600), null);
-
   (lib.floor_1 = function (mode, startPosition, loop, reversed) {
     if (loop == null) {
       loop = true;
@@ -672,7 +672,7 @@
     props.reversed = reversed;
     cjs.MovieClip.apply(this, [props]);
 
-    // Layer_2
+    // txt2_on
     this.instance = new lib.txt2_on_1();
     this.instance.setTransform(400, 130, 1, 1, 0, 0, 0, 150, 125);
     this.instance.alpha = 0;
@@ -682,8 +682,10 @@
       cjs.Tween.get(this.instance)
         .wait(34)
         .to({ _off: false }, 0)
-        .to({ alpha: 1 }, 25, cjs.Ease.quadInOut)
-        .wait(16)
+        .to({ alpha: 1 }, 15)
+        .wait(10)
+        .to({ alpha: 0 }, 15)
+        .wait(1)
     );
 
     // txt2_txt
@@ -698,6 +700,22 @@
         .to({ y: 125 }, 7, cjs.Ease.get(1))
         .to({ y: 130, mode: 'synched' }, 3, cjs.Ease.get(-1))
         .wait(41)
+    );
+
+    // txt1_on
+    this.instance_1 = new lib.txt1_on_1();
+    this.instance_1.setTransform(400, 130, 1, 1, 0, 0, 0, 150, 125);
+    this.instance_1.alpha = 0;
+    this.instance_1._off = true;
+
+    this.timeline.addTween(
+      cjs.Tween.get(this.instance_1)
+        .wait(34)
+        .to({ _off: false }, 0)
+        .to({ alpha: 1 }, 15)
+        .wait(10)
+        .to({ alpha: 0 }, 15)
+        .wait(1)
     );
 
     // logo1
@@ -749,7 +767,7 @@
   p.nominalBounds = new cjs.Rectangle(250, 0, 300, 315);
 
   // stage content:
-  (lib.TELUS_Mobility_Stim_Black_Friday_TOS_Consideration_IABs_300x600 = function (
+  (lib.TELUS_Mobility_Stim_BoxingWeek_MOB_Consideration_300x600 = function (
     mode,
     startPosition,
     loop,
@@ -863,20 +881,6 @@
         .wait(121)
     );
 
-    // legal
-    this.instance_6 = new lib.legal_1();
-    this.instance_6.setTransform(150, 125, 1, 1, 0, 0, 0, 150, 125);
-    this.instance_6.alpha = 0;
-    this.instance_6._off = true;
-
-    this.timeline.addTween(
-      cjs.Tween.get(this.instance_6)
-        .wait(104)
-        .to({ _off: false }, 0)
-        .to({ alpha: 1 }, 10, cjs.Ease.get(1))
-        .wait(111)
-    );
-
     // floor
     this.instance_7 = new lib.floor_1();
     this.instance_7.setTransform(150, 265, 1, 1, 0, 0, 0, 150, 125);
@@ -913,7 +917,7 @@
   p.nominalBounds = new cjs.Rectangle(-202.1, 280, 802.1, 460);
   // library properties:
   lib.properties = {
-    id: '9C37CEF21CB344BE931725B6C6535938',
+    id: 'FA8ED0B68CBD406A8CE4F3994D5F7455',
     width: 300,
     height: 600,
     fps: 30,
@@ -925,12 +929,12 @@
       { src: 'assets/blackfriday.png?1699562801452', id: 'blackfriday' },
       { src: 'assets/cta.png?1699562801452', id: 'cta' },
       { src: 'assets/floor.png?1699562801452', id: 'floor' },
-      // { src: 'assets/legal.png?1699562801452', id: 'legal' },
       { src: 'assets/logo1.png?1699562801452', id: 'logo1' },
       { src: 'assets/logo2.png?1699562801452', id: 'logo2' },
       { src: 'assets/product.png?1699562801452', id: 'product' },
       { src: 'assets/txt1_border.png?1699562801452', id: 'txt1_bd' },
       { src: 'assets/txt1.png?1699562801452', id: 'txt1' },
+      { src: 'assets/txt1_on.png?1699562801452', id: 'txt1_on' },
       { src: 'assets/txt2_off.png?1699562801452', id: 'txt2_off' },
       { src: 'assets/txt2_on.png?1699562801452', id: 'txt2_on' },
       { src: 'assets/txt3_off.png?1699562801452', id: 'txt3_off' },
@@ -983,7 +987,7 @@
   };
 
   an.compositions = an.compositions || {};
-  an.compositions['9C37CEF21CB344BE931725B6C6535938'] = {
+  an.compositions['FA8ED0B68CBD406A8CE4F3994D5F7455'] = {
     getStage: function () {
       return exportRoot.stage;
     },

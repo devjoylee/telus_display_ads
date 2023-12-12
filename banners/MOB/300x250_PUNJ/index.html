@@ -20,7 +20,7 @@
         canvas = document.getElementById('canvas');
         anim_container = document.getElementById('animation_container');
         dom_overlay_container = document.getElementById('dom_overlay_container');
-        var comp = AdobeAn.getComposition('9C37CEF21CB344BE931725B6C6535938');
+        var comp = AdobeAn.getComposition('BAA8FE9FAC364AAE9BA8FA9DB0EED5BB');
         var lib = comp.getLibrary();
         var loader = new createjs.LoadQueue(false);
         loader.addEventListener('fileload', function (evt) {
@@ -50,7 +50,7 @@
             frames: ssMetadata[i].frames,
           });
         }
-        exportRoot = new lib.TELUS_Mobility_Stim_Black_Friday_TOS_Consideration_IABs_300x250();
+        exportRoot = new lib.TELUS_Mobility_Stim_BoxingWeek_MOB_Consideration_300x250();
         stage = new lib.Stage(canvas);
         //Registers the "tick" event listener.
         fnStartAnimation = function () {
