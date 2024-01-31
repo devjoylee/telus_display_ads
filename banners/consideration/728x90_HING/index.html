@@ -15,39 +15,34 @@
   <body>
     <div id="ad">
       <div id="banner">
-        <img src="assets/svg/logo_telus.svg" class="svg logo" alt="logo" />
-        <img src="assets/svg/logo_samsung.svg" class="svg logo2" alt="logo" />
+        <img src="assets/txt/logo_telus.svg" class="logo" alt="logo" />
 
-        <img src="assets/device1.png" class="device1 img" />
+        <div class="kvs img">
+          <img src="assets/img/kv-macaw.gif" class="img kv macaw" />
+          <img src="assets/img/kv-toucan1.gif" class="img kv toucan tc1" />
+        </div>
 
         <div class="frame frame1">
-          <img src="assets/svg/copy1.svg" class="svg copy" />
+          <img src="assets/txt/copy1.png" class="img copy" />
         </div>
 
         <div class="frame frame2">
-          <svg width="100%" height="100%">
-            <defs>
-              <mask id="mask">
-                <rect id="maskRect" width="100%" height="100%" fill="#ffffff" />
-              </mask>
-            </defs>
-            <g mask="url(#mask)">
-              <rect width="100%" height="100%" fill="#000000" />
-              <image href="assets/mask.png" width="100%" height="100%" />
-            </g>
-          </svg>
+          <img src="assets/img/kv-toucan2.gif" class="img kv toucan tc2" />
+          <img src="assets/txt/copy2.png" class="img copy" />
         </div>
 
         <div class="frame frame3">
-          <img src="assets/svg/copy2.svg" class="svg copy" />
-          <img src="assets/device2.png" class="device2 img" />
-          <img src="assets/svg/legal.svg" class="svg legal" />
+          <img src="assets/txt/copy3.png" class="img copy" />
+          <img src="assets/img/kv-both.png" class="img" />
         </div>
 
         <div class="cta">
-          <img src="assets/svg/cta-off.svg" class="svg cta-off" />
-          <img src="assets/svg/cta-on.svg" class="svg cta-on" />
+          <img src="assets/txt/cta-off.svg" class="img cta-off" />
+          <img src="assets/txt/cta-on.svg" class="img cta-on" />
         </div>
+
+        <img src="assets/txt/logo_samsung1.png" class="img samsung-long" alt="logo" />
+        <img src="assets/txt/logo_samsung2.png" class="img samsung-short" alt="logo" />
       </div>
     </div>
 
@@ -56,14 +51,14 @@
         defaults: { duration: 0.6, ease: 'none' },
       });
 
-      gsap.set('#maskRect', { scaleX: 0, transformOrigin: 'right center' }),
-        timeline
-          .to('#maskRect', { scaleX: 1, duration: 0.25 }, '+=2.5')
-          .to(['.frame1', '.frame2', '.device1'], { alpha: 0 }, '+=1.8')
-          .from('.frame3', { alpha: 0 }, '<')
-          .from(['.frame3 .copy', '.legal'], { alpha: 0 }, '+=0.2')
-          .to('.logo', { duration: 0.3, y: '-=12' }, '<')
-          .from('.cta', { alpha: 0 }, '+=0.5');
+      timeline
+        .to('.frame1', { alpha: 0 }, '+=1.8')
+        .from('.frame2', { alpha: 0 }, '+=0.2')
+        .to('.tc1', { alpha: 0 })
+        .to(['.frame2', '.samsung-long', '.kvs'], { alpha: 0 }, '+=1.8')
+        .from(['.frame3', '.samsung-short'], { alpha: 0 }, '+=0.2')
+        .to('.logo', { duration: 0.3, y: '-=17' }, '<')
+        .from('.cta', { alpha: 0 }, '+=0.5');
 
       // exit and link to banner
       document.querySelector('#banner').addEventListener('click', exit);
