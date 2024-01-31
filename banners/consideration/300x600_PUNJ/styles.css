@@ -29,31 +29,41 @@ body {
   position: absolute;
 }
 
-.svg,
 .img {
   width: 100%;
   height: 100%;
 }
 
 .logo {
-  width: 290px;
-  height: 250px;
+  width: 320px;
+  height: 290px;
   right: 6px;
-  top: 16px;
-}
-.legal {
-  width: auto;
-  height: 9px;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
 }
 
+.logo-samsung img {
+  width: 350px;
+  height: auto;
+  top: 5px;
+}
+
+.kv {
+  width: 100%;
+  height: auto;
+  bottom: 80px;
+}
+
+.kv.macaw {
+  width: 100%;
+  left: -85px;
+}
+.kv.toucan {
+  right: -60px;
+}
 /* ----- CTA Button ----- */
 .cta {
   width: 100px;
-  height: 29px;
-  top: 225px;
+  height: 27px;
+  top: 270px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;
