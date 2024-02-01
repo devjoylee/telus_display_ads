@@ -15,8 +15,6 @@
   <body>
     <div id="ad">
       <div id="banner">
-        <img src="assets/txt/logo_telus.svg" class="logo" alt="logo" />
-
         <div class="kvs img">
           <img src="assets/img/kv-macaw.gif" class="img kv macaw" />
           <img src="assets/img/kv-toucan1.gif" class="img kv toucan tc1" />
@@ -41,6 +39,7 @@
           <img src="assets/txt/cta-on.svg" class="img cta-on" />
         </div>
 
+        <img src="assets/txt/logo_telus.svg" class="logo" alt="logo" />
         <img src="assets/txt/logo_samsung1.png" class="img samsung-long" alt="logo" />
         <img src="assets/txt/logo_samsung2.png" class="img samsung-short" alt="logo" />
       </div>
@@ -57,7 +56,6 @@
         .to('.tc1', { alpha: 0 })
         .to(['.frame2', '.samsung-long', '.kvs'], { alpha: 0 }, '+=1.8')
         .from(['.frame3', '.samsung-short'], { alpha: 0 }, '+=0.2')
-        .to('.logo', { duration: 0.3, y: '-=17' }, '<')
         .from('.cta', { alpha: 0 }, '+=0.5');
 
       // exit and link to banner

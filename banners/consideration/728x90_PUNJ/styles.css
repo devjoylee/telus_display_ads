@@ -35,9 +35,9 @@ body {
 }
 
 .logo {
-  width: 320px;
-  right: 10px;
-  top: 23px;
+  width: 310px;
+  right: 5px;
+  top: 9px;
 }
 
 .kv {
@@ -52,7 +52,7 @@ body {
 
 .kv.toucan {
   width: 24%;
-  right: 100px;
+  right: 110px;
   bottom: -8px;
 }
 

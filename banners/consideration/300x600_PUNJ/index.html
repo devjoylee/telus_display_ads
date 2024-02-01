@@ -15,15 +15,9 @@
   <body>
     <div id="ad">
       <div id="banner">
-        <img src="assets/txt/logo_telus.svg" class="logo" alt="logo" />
-
-        <div class="kvs img">
-          <img src="assets/img/kv-macaw.gif" class="img kv macaw" />
-          <img src="assets/img/kv-toucan1.gif" class="img kv toucan tc1" />
-        </div>
-
         <div class="frame frame1">
           <img src="assets/txt/copy1.png" class="img copy" />
+          <img src="assets/img/kv-toucan1.gif" class="img kv toucan tc1" />
         </div>
 
         <div class="frame frame2">
@@ -36,11 +30,14 @@
           <img src="assets/img/kv-both.png" class="img" />
         </div>
 
+        <img src="assets/img/kv-macaw.gif" class="img kv macaw" />
+
         <div class="cta">
           <img src="assets/txt/cta-off.png" class="img cta-off" />
           <img src="assets/txt/cta-on.png" class="img cta-on" />
         </div>
 
+        <img src="assets/txt/logo_telus.svg" class="logo" alt="logo" />
         <div class="logo-samsung">
           <img src="assets/txt/logo_samsung1.png" class="img samsung-long" alt="logo" />
           <img src="assets/txt/logo_samsung2.png" class="img samsung-short" alt="logo" />
@@ -54,10 +51,11 @@
       });
 
       timeline
-        .to('.frame1', { alpha: 0 }, '+=1.8')
-        .from('.frame2', { alpha: 0 }, '+=0.2')
-        .to('.tc1', { alpha: 0 })
-        .to(['.frame2', '.samsung-long', '.kvs'], { alpha: 0 }, '+=1.8')
+        .to('.frame1 .copy', { alpha: 0 }, '+=1.8')
+        .from('.frame2 .copy', { alpha: 0 }, '+=0.2')
+        .to('.tc1', { alpha: 0 }, '<=')
+        .from('.tc2', { alpha: 0, duration: 0.05 }, '<=')
+        .to(['.frame2', '.samsung-long', '.macaw'], { alpha: 0 }, '+=1.8')
         .from(['.frame3', '.samsung-short'], { alpha: 0 }, '+=0.2')
         .from('.cta', { alpha: 0 }, '+=0.7');
 
