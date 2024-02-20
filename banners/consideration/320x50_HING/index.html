@@ -23,6 +23,7 @@
 
         <div class="frame frame2">
           <img src="assets/txt/copy2.png" class="img copy" />
+          <img src="assets/txt/legal.png" class="img legal" />
         </div>
 
         <div class="frame frame3">
@@ -33,16 +34,14 @@
 
     <script>
       const timeline = gsap.timeline({
-        defaults: { duration: 0.6, ease: 'none' },
+        defaults: { duration: 0.6, ease: 'none', alpha: 0 },
       });
 
       timeline
-        .to('.frame1', { alpha: 0 }, '+=1.8')
-        .from('.frame2', { alpha: 0 }, '+=0.2')
-        .to('.tc1', { alpha: 0 })
-        .to(['.frame2', '.samsung-long', '.kvs'], { alpha: 0 }, '+=1.8')
-        .from(['.frame3', '.samsung-short'], { alpha: 0 }, '+=0.2')
-        .from('.cta', { alpha: 0 }, '+=0.7');
+        .to('.frame1', {}, '+=1.8')
+        .from('.frame2', {}, '+=0.2')
+        .to('.frame2', {}, '+=1.8')
+        .from('.frame3', {}, '+=0.2');
 
       // exit and link to banner
       document.querySelector('#banner').addEventListener('click', exit);

@@ -16,21 +16,21 @@
     <div id="ad">
       <div id="banner">
         <div class="frame frame1">
+          <img src="assets/img/kv-toucan.gif" class="img kv toucan" />
+          <img src="assets/img/kv-macaw.gif" class="img kv macaw" />
           <img src="assets/txt/copy1.png" class="img copy" />
-          <img src="assets/img/kv-toucan1.gif" class="img kv toucan tc1" />
         </div>
 
         <div class="frame frame2">
-          <img src="assets/img/kv-toucan2.gif" class="img kv toucan tc2" />
+          <img src="assets/img/kv-device.png" class="img" />
           <img src="assets/txt/copy2.png" class="img copy" />
+          <img src="assets/txt/legal.png" class="img legal" />
         </div>
 
         <div class="frame frame3">
           <img src="assets/txt/copy3.png" class="img copy" />
-          <img src="assets/img/kv-both.png" class="img" />
+          <img src="assets/img/kv-all.png" class="img" />
         </div>
-
-        <img src="assets/img/kv-macaw.gif" class="img kv macaw" />
 
         <div class="cta">
           <img src="assets/txt/cta-off.svg" class="img cta-off" />
@@ -47,17 +47,16 @@
 
     <script>
       const timeline = gsap.timeline({
-        defaults: { duration: 0.6, ease: 'none' },
+        defaults: { duration: 0.6, ease: 'none', alpha: 0 },
       });
 
       timeline
-        .to('.frame1 .copy', { alpha: 0 }, '+=1.8')
-        .from('.frame2 .copy', { alpha: 0 }, '+=0.2')
-        .to('.tc1', { alpha: 0 }, '<=')
-        .from('.tc2', { alpha: 0, duration: 0.05 }, '<=')
-        .to(['.frame2', '.samsung-long', '.macaw'], { alpha: 0 }, '+=1.8')
-        .from(['.frame3', '.samsung-short'], { alpha: 0 }, '+=0.2')
-        .from('.cta', { alpha: 0 }, '+=0.7');
+        .to(['.frame1', '.samsung-long'], {}, '+=1.8')
+        .from(['.frame2', '.samsung-short'], {}, '+=0.2')
+        .from('.legal', {}, '+=0.5')
+        .to('.frame2', {}, '+=1.5')
+        .from('.frame3', {}, '+=0.2')
+        .from('.cta', {}, '+=0.5');
 
       // exit and link to banner
       document.querySelector('#banner').addEventListener('click', exit);
