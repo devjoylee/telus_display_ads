@@ -47,7 +47,7 @@ footer p {
 
 .section {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(3, 200px);
   grid-gap: 20px;
   position: relative;
 }
@@ -92,6 +92,24 @@ dd + dd {
 
 dd {
   font-size: 17px;
+  line-height: 1.3;
+}
+
+dd a {
+  color: #000;
+  cursor: pointer;
+}
+
+dd a:visited {
+  color: #999;
+}
+
+.revised a {
+  color: #e40000 !important;
+}
+
+.bold a {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {

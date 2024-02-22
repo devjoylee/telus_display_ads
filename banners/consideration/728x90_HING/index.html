@@ -15,46 +15,49 @@
   <body>
     <div id="ad">
       <div id="banner">
+        <img src="assets/copy/logo.svg" class="svg logo" />
+
+        <div class="overlay">
+          <div class="textbox"></div>
+        </div>
+
         <div class="frame frame1">
-          <img src="assets/img/kv-macaw.gif" class="img kv macaw" />
-          <img src="assets/img/kv-toucan.gif" class="img kv toucan" />
-          <img src="assets/txt/copy1.png" class="img copy" />
+          <img src="assets/copy/txt1a.svg" class="svg txt1" />
+          <img src="assets/copy/txt1b.svg" class="svg txt1" />
+          <img src="assets/copy/txt2a.svg" class="svg txt2" />
+          <img src="assets/copy/txt2b.svg" class="svg txt2" />
         </div>
 
         <div class="frame frame2">
-          <img src="assets/img/kv-device.png" class="img" />
-          <img src="assets/txt/copy2.png" class="img copy" />
-          <img src="assets/txt/legal.png" class="img legal" />
-        </div>
-
-        <div class="frame frame3">
-          <img src="assets/txt/copy3.png" class="img copy" />
-          <img src="assets/img/kv-all.png" class="img" />
+          <img src="assets/copy/txt3.png" class="svg txt3" />
         </div>
 
         <div class="cta">
-          <img src="assets/txt/cta-off.svg" class="img cta-off" />
-          <img src="assets/txt/cta-on.svg" class="img cta-on" />
+          <div class="cta-bg"></div>
+          <img src="assets/copy/cta-off.svg" class="svg cta-off" />
+          <img src="assets/copy/cta-on.svg" class="svg cta-on" />
         </div>
 
-        <img src="assets/txt/logo_telus.svg" class="logo" alt="logo" />
-        <img src="assets/txt/logo_samsung1.png" class="img samsung1" alt="logo" />
-        <img src="assets/txt/logo_samsung2.png" class="img samsung2" alt="logo" />
+        <img src="assets/leaf.png" class="leaf" />
       </div>
     </div>
-
     <script>
       const timeline = gsap.timeline({
-        defaults: { duration: 0.6, ease: 'none', alpha: 0 },
+        defaults: {},
+        repeat: 1,
+        repeatDelay: 3.5,
       });
 
       timeline
-        .to(['.frame1', '.samsung1'], {}, '+=1.8')
-        .from(['.frame2', '.samsung2'], {}, '+=0.2')
-        .from('.legal', {}, '+=0.5')
-        .to('.frame2', {}, '+=1.5')
-        .from('.frame3', {}, '+=0.2')
-        .from('.cta', {}, '+=0.5');
+        .from('.leaf', { y: 70, ease: 'none' })
+        .from('.txt1', { scale: 0, ease: 'back.out', x: -150, stagger: 0.15 }, '<')
+        .from('.txt2', { scale: 0, ease: 'back.out', x: 160, stagger: 0.15 }, '-=0.35')
+        .to('.txt1', { opacity: 0, delay: 3 })
+        .to('.txt2', { opacity: 0 }, '<')
+        .from('.frame2', { opacity: 0 })
+        .to('.txt2', { opacity: 1 }, '<')
+        .to('.leaf', { y: 70, repeat: 1, yoyo: true, ease: 'none' }, '-=1')
+        .to('.cta', { display: 'block', opacity: 1, delay: 0.2 });
 
       // exit and link to banner
       document.querySelector('#banner').addEventListener('click', exit);

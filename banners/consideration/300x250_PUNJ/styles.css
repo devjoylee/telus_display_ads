@@ -15,7 +15,7 @@ body {
   width: 300px;
   height: 250px;
   border: 1px solid #000;
-  background: #f4f5f7;
+  background: #f4f4f7;
   position: relative;
 }
 
@@ -29,46 +29,93 @@ body {
   position: absolute;
 }
 
-.img {
-  width: 100%;
-  height: 100%;
+.svg,
+.frame {
+  width: 300px;
+  height: 250px;
 }
 
 .logo {
-  width: 270px;
-  height: 250px;
-  right: 3px;
-  top: -8px;
+  width: 120px;
+  height: 25px;
+  right: 25px;
+  top: 20px;
 }
 
-.kv {
-  width: 70%;
-  height: auto;
+/* ----- FRAME ----- */
+.overlay {
+  width: 252px;
+  height: 160px;
+  top: 62px;
+  left: 23px;
+  padding: 4px;
+  box-sizing: border-box;
+  background: linear-gradient(130deg, #0f8b3f, #63ca02);
+  animation: gradient 2s infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay::before {
+  content: '';
+  height: 300%;
+  box-shadow: 0px 0px 30px 30px rgb(255 255 255 / 90%);
+  transform: rotate(45deg);
+  animation: shadow 2s 0.6;
+  animation-delay: 1.4s;
+  top: -150%;
+  left: -100px;
+  position: absolute;
+}
+
+.textbox {
+  background: #f4f4f7;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  position: absolute;
+  overflow: hidden;
+}
+
+.gradient-mask {
+  left: 300px;
+  background: linear-gradient(90deg, rgba(244, 244, 247, 0) 0, #f4f4f7 50%);
+  width: 600px;
+  height: 100%;
+  z-index: 20;
+}
+
+.leaf {
+  width: 160px;
   bottom: 0;
+  right: -10px;
+  z-index: 999;
 }
 
-.kv.macaw {
-  width: 80%;
-  left: -65px;
-}
-.kv.toucan {
-  right: -30px;
+@keyframes shadow {
+  0% {
+    transform: rotate(45deg) translateX(0);
+  }
+  100% {
+    transform: rotate(45deg) translateX(400px);
+  }
 }
 
 /* ----- CTA Button ----- */
 .cta {
-  width: 80px;
-  height: 21px;
-  bottom: 25px;
-  left: 20px;
-  border-radius: 15px;
-  background: #477e22;
-  border: 1px solid #477e22;
-  transition: background 0.25s ease-in-out;
+  display: none;
+  opacity: 0;
+  position: inherit !important;
 }
 
-.cta img {
-  object-fit: contain;
+.cta-bg {
+  width: 73px;
+  height: 20px;
+  top: 74%;
+  left: 36px;
+  border-radius: 15px;
+  background: #248700;
+  border: 1px solid #248700;
+  transition: background 0.3s ease-in-out;
 }
 
 .cta-on,
@@ -80,7 +127,7 @@ body {
   opacity: 1;
 }
 
-#banner:hover .cta {
+#banner:hover .cta-bg {
   background: #fff;
 }
 
@@ -90,5 +137,6 @@ img {
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
+  user-drag: none;
   -webkit-touch-callout: none;
 }
