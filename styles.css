@@ -11,19 +11,27 @@ body {
   min-height: 100vh;
 }
 
-header h1 {
-  font-size: 33px;
+header {
   text-align: center;
-  letter-spacing: -1px;
-  color: #333;
+  padding: 15px 0 100px;
+}
+
+header img {
+  width: 150px;
 }
 
 header p {
-  padding: 50px 0 4px;
-  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 15px;
   font-size: 14px;
   letter-spacing: -0.5px;
   color: #888;
+}
+
+header h1 {
+  font-size: 33px;
+  letter-spacing: -1px;
+  color: #333;
 }
 
 footer {
@@ -42,7 +50,7 @@ footer p {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 100px 20px 80px;
+  padding: 0 20px 80px;
 }
 
 .section {
@@ -113,11 +121,11 @@ dd a:visited {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    padding-bottom: 80px;
+  }
   header h1 {
     font-size: 28px;
-  }
-  .container {
-    padding-top: 70px;
   }
   .section {
     grid-template-columns: 1fr 1fr;
