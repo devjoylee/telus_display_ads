@@ -10,7 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>TELUS_320x50_SC</title>
-
+    <script>
+      var clickTag = '';
+    </script>
     <script
       data-source="gwd_webcomponents_v1_min.js"
       data-version="2"
@@ -3444,6 +3446,13 @@
     </script>
     <script type="text/gwd-admetadata">
       {"version":1,"type":"GoogleAd","format":"","template":"Banner 3.0.0","politeload":true,"fullscreen":false,"counters":[],"timers":[],"exits":[{"exitId":"clicktag"}],"creativeProperties":{"minWidth":320,"minHeight":50,"maxWidth":320,"maxHeight":50},"components":["gwd-google-ad","gwd-image","gwd-page","gwd-pagedeck","gwd-taparea"],"responsive":false}
+    </script>
+    <script>
+      // exit and link to banner
+      document.querySelector('#clicktag').addEventListener('click', exit);
+      function exit() {
+        window.open(clickTag);
+      }
     </script>
   </body>
 </html>
